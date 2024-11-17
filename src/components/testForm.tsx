@@ -41,27 +41,34 @@ export default function TestForm() {
   }
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 max-w-3xl mx-auto py-10"
-      >
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Nom</FormLabel>
-              <FormControl>
-                <Input placeholder="Paracetamol" type="text" {...field} />
-              </FormControl>
-              <FormDescription>nom du produit</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Ajouter</Button>
-      </form>
-    </Form>
+    <div className="w-[200px]">
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-8 max-w-3xl mx-auto py-10"
+        >
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Nom</FormLabel>
+                <FormControl>
+                  <Input
+                    className="h-8"
+                    placeholder="Paracetamol"
+                    type="text"
+                    {...field}
+                  />
+                </FormControl>
+                <FormDescription>nom du produit</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit">Ajouter</Button>
+        </form>
+      </Form>
+    </div>
   );
 }

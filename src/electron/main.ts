@@ -10,6 +10,7 @@ app.on("ready", () => {
     // disables default system frame (dont do this if you want a proper working menu bar)
     // frame: false,
   });
+
   if (isDev()) {
     mainWindow.loadURL("http://localhost:5123");
   } else {
