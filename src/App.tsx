@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import supabase from "./lib/supabase";
+import TestForm from "./components/testForm";
 
 function App() {
   const [tests, setTests] = useState([]);
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <h1>Todo List</h1>
+      <TestForm />
       <div>{JSON.stringify(tests)}</div>
     </div>
   );
