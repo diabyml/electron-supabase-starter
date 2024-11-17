@@ -1,3 +1,4 @@
+import TestCounter from "@/components/TestCounter";
 import { useNavigate } from "react-router-dom";
 
 export default function About() {
@@ -6,6 +7,7 @@ export default function About() {
     <div>
       <h1>About</h1>
       <button onClick={() => navigate(-1)}>Back</button>
+      <TestCounter />
     </div>
   );
 }
